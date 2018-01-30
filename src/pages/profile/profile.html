@@ -1,0 +1,67 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="induscolor">
+  	<!--<button class="back-button bar-button bar-button-md back-button-md bar-button-default bar-button-default-md show-back-button" ion-button="bar-button" ng-reflect-klass="back-button" ng-reflect-ng-class="back-button-md"><span class="button-inner"><ion-icon class="back-button-icon icon icon-md back-button-icon-md ion-md-arrow-back" role="img" ng-reflect-klass="back-button-icon" ng-reflect-ng-class="back-button-icon-md" aria-label="arrow back" ng-reflect-name="md-arrow-back"></ion-icon><span class="back-button-text back-button-text-md" ng-reflect-klass="back-button-text" ng-reflect-ng-class="back-button-text-md"></span></span><div class="button-effect" style="transform: translate3d(-12px, -21px, 0px) scale(1); height: 64px; width: 64px; opacity: 0; transition: transform 273ms, opacity 191ms 82ms;"></div></button>
+    <img ion-right src="assets/imgs/indus.png" class="navbarLogo" />-->
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<ion-list>
+    <ion-title>Sign up or Login to manage your trips</ion-title>
+</ion-list>
+ <div style="height:2px; background:#ccc; width:100%;"></div>
+<button ion-button  color="light" (click)="login()">Login</button> <button ion-button  color="light" (click)="signup()">Sign up</button>
+
+  <!--<div id="profile-bg" [ngStyle]="{'background-image': 'url(' + imageUrl +')'}"></div>-->
+  <div id="content">
+    <div id="profile-info">
+      <img id="profile-image" src="assets/imgs/profile/profile-2.jpg">
+      <h3 id="profile-name">Kishan Singh</h3>
+      <h5 id="email">kishang.90@gmail.com</h5>
+      <h5 id="number">9599367430</h5>
+    </div>
+
+    <div style="height:5px; background:#ccc; width:100%;">
+    </div>
+    <ion-list>
+      <ion-item (click)="mybooking()">
+    <ion-label fixed>My Bookings</ion-label>
+  </ion-item>
+
+  <ion-item (click)="wallet()">
+    <ion-label fixed>Wallet</ion-label>
+  </ion-item>
+
+  <ion-item (click)="wallet()">
+    <ion-label fixed>Offers</ion-label>
+  </ion-item>
+
+  <ion-item (click)="about()">
+    <ion-label fixed>About Us</ion-label>
+  </ion-item>
+
+  <ion-item (click)="settingspage()">
+    <ion-label fixed>Settings</ion-label>
+  </ion-item>
+    </ion-list>
+
+    <!--<ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+  </ion-list>-->
+  </div>
+  <button ion-button block color="induscolor" (click)="logout()">Logout</button>
+</ion-content>

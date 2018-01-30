@@ -1,0 +1,324 @@
+page-mywallet {
+
+#mywallet{
+    background: color($colors, light);
+    h1{
+        font-size: 52px;
+        margin-top:50px
+    }
+    .marginTop{
+        margin-top:100px;
+    }
+    .marginTopless{
+        margin-top:10px;
+    }
+    .logo{
+        height: 140px;
+    }
+
+    .md-flight-booking {
+    padding: 0!important;
+}
+
+.md-filter-cont {
+    padding: .5em;
+}
+
+.md-flight-booking {
+    padding: 0!important;
+}
+
+.md-filter-cont {
+    padding: .5em;
+}
+
+
+/* header */
+
+.md-flight-booking .md-ftype-cont {
+    padding-top: 1.15em;
+}
+
+.md-flight-booking .md-header {
+    background: #4ECCC4;
+    padding: 1em;
+    color: #fff;
+    text-align: center;
+}
+
+.mbsc-material .md-header {
+    background: #009688;
+}
+
+.mbsc-android-holo .md-header {
+    background: #31c6e7;
+}
+
+.mbsc-ios .md-header {
+    background: #1272dc;
+    color: #fff;
+}
+
+.mbsc-ios-dark .md-header {
+    background: #ff8400;
+    color: #1a1a1a;
+}
+
+.mbsc-wp .md-header {
+    background: #1a9fe0;
+    color: #000;
+}
+
+.mbsc-material-dark .md-header {
+    color: #303030;
+    background: #81ccc4;
+}
+
+.mbsc-android-holo-light .md-header {
+    color: #000;
+}
+
+.mbsc-mobiscroll-dark .md-header {
+    color: #263238;
+}
+
+
+/*select*/
+
+.md-airports-booking .mbsc-sc-itm,
+.md-airports-booking .dw-li {
+    text-align: center;
+}
+
+.md-airports-booking .md-airport {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: normal;
+}
+
+.md-airports-booking .md-airport-name {
+    height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.md-airports-booking .md-airport-location {
+    height: 12px;
+    line-height: 12px;
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.md-airports-booking #filter_input {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+
+/* range inputs */
+
+.md-flight-booking .md-time-range {
+    overflow: hidden;
+    width: 99%;
+}
+
+.md-flight-booking.mbsc-ios .md-time-range {
+    background: #fff;
+}
+
+.md-flight-booking .md-time-range .mbsc-input {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.md-flight-booking.mbsc-ios .md-time-range .mbsc-input {
+    display: block;
+}
+
+.md-flight-booking.mbsc-ios .md-time-range .mbsc-input .mbsc-label {
+    font-size: 14px;
+    padding-left: 1.14285em;
+    padding-top: 0.75em;
+    line-height: 22px;
+}
+
+.md-flight-booking.mbsc-ios .md-time-range .mbsc-input .mbsc-label {
+    width: 100%;
+}
+
+.md-time-range .mbsc-input:first-child {
+    padding-right: .5em;
+}
+
+.md-time-range .mbsc-input:last-child {
+    padding-left: .5em;
+}
+
+
+/* Stepper */
+
+.md-flight-booking.mbsc-form .mbsc-stepper-cont {
+    padding-top: 1.125em;
+    padding-bottom: 1.125em;
+}
+
+
+/* header */
+
+.md-flight-booking .md-ftype-cont {
+    padding-top: 1.15em;
+}
+
+.md-flight-booking .md-header {
+    background: #4ECCC4;
+    padding: 1em;
+    color: #fff;
+    text-align: center;
+}
+
+.mbsc-material .md-header {
+    background: #009688;
+}
+
+.mbsc-android-holo .md-header {
+    background: #31c6e7;
+}
+
+.mbsc-ios .md-header {
+    background: #1272dc;
+    color: #fff;
+}
+
+.mbsc-ios-dark .md-header {
+    background: #ff8400;
+    color: #1a1a1a;
+}
+
+.mbsc-wp .md-header {
+    background: #1a9fe0;
+    color: #000;
+}
+
+.mbsc-material-dark .md-header {
+    color: #303030;
+    background: #81ccc4;
+}
+
+.mbsc-android-holo-light .md-header {
+    color: #000;
+}
+
+.mbsc-mobiscroll-dark .md-header {
+    color: #263238;
+}
+
+
+/*select*/
+
+.md-airports-booking .mbsc-sc-itm,
+.md-airports-booking .dw-li {
+    text-align: center;
+}
+
+.md-airports-booking .md-airport {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: normal;
+}
+
+.md-airports-booking .md-airport-name {
+    height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.md-airports-booking .md-airport-location {
+    height: 12px;
+    line-height: 12px;
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.md-airports-booking #filter_input {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+
+/* range inputs */
+
+.md-flight-booking .md-time-range {
+    overflow: hidden;
+    width: 99%;
+}
+
+.md-flight-booking.mbsc-ios .md-time-range {
+    background: #fff;
+}
+
+.md-flight-booking .md-time-range .mbsc-input {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.md-flight-booking.mbsc-ios .md-time-range .mbsc-input {
+    display: block;
+}
+
+.md-flight-booking.mbsc-ios .md-time-range .mbsc-input .mbsc-label {
+    font-size: 14px;
+    padding-left: 1.14285em;
+    padding-top: 0.75em;
+    line-height: 22px;
+}
+
+.md-flight-booking.mbsc-ios .md-time-range .mbsc-input .mbsc-label {
+    width: 100%;
+}
+
+.md-time-range .mbsc-input:first-child {
+    padding-right: .5em;
+}
+
+.md-time-range .mbsc-input:last-child {
+    padding-left: .5em;
+}
+
+
+/* Stepper */
+
+.md-flight-booking.mbsc-form .mbsc-stepper-cont {
+    padding-top: 1.125em;
+    padding-bottom: 1.125em;
+}
+}
+#content {
+        position: relative;
+        margin-top: 5px;
+        background-color: white;
+        box-shadow: 0px -1px 10px rgba(0,0,0,0.4);
+        padding-top: 0px;
+      }
+
+      #content {
+        position: relative;
+        margin-top: 5px;
+        background-color: white;
+        box-shadow: 0px -1px 10px rgba(0,0,0,0.4);
+        padding-top: 0px;
+      }
+
+
+}

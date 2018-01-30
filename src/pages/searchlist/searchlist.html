@@ -1,0 +1,42 @@
+<!--
+  Generated template for the SearchlistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="induscolor">
+    <ion-title>Bus Service List</ion-title>
+    <ion-buttons end>
+          <button ion-button end icon-only (click)="presentPopover($event)">
+              <ion-icon name="funnel"></ion-icon>
+          </button>
+       </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+<p> Leaving Date is: {{origin}}</p>
+
+    <mbsc-form class="md-cardaction" [options]="formSettings">
+    
+        <div class="md-card" *ngFor=" let item of data; let i = index"  (click)="buslist()">
+            <!--<div class="md-card-bg {{item.cssClass}}"></div>-->
+            <div class="md-card-text mbsc-padding">
+                <h4>{{item.title}}</h4>
+                <p class="mbsc-desc">{{item.desc}}</p>
+                <div class="md-card-like"><p class="mbsc-desc">Departure:{{item.dtime}}</p></div>
+                <p class="mbsc-desc">Available Seats: {{item.aseats}}</p><div class="running"><p class="mbsc-desc">Time: {{item.rtime}}</p></div>
+                <!--<div class="md-card-like" [ngClass]="{'md-like-active': item.like }" (click)="likeHandler(i)"><span class="mbsc-ic mbsc-ic-heart"></span></div>-->
+            </div>
+    
+            <button class="mbsc-btn-flat md-share-btn">4.25 Ratings</button>
+            <button class="mbsc-btn-flat">INR 500</button>
+        </div>
+    
+    </mbsc-form>
+</ion-content>

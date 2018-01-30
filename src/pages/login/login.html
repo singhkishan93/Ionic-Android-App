@@ -1,0 +1,110 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="induscolor">
+    <!--<button class="back-button bar-button bar-button-md back-button-md bar-button-default bar-button-default-md show-back-button" ion-button="bar-button" ng-reflect-klass="back-button" ng-reflect-ng-class="back-button-md"><span class="button-inner"><ion-icon class="back-button-icon icon icon-md back-button-icon-md ion-md-arrow-back" role="img" ng-reflect-klass="back-button-icon" ng-reflect-ng-class="back-button-icon-md" aria-label="arrow back" ng-reflect-name="md-arrow-back"></ion-icon><span class="back-button-text back-button-text-md" ng-reflect-klass="back-button-text" ng-reflect-ng-class="back-button-text-md"></span></span><div class="button-effect" style="transform: translate3d(-12px, -21px, 0px) scale(1); height: 64px; width: 64px; opacity: 0; transition: transform 273ms, opacity 191ms 82ms;"></div></button>
+    <img ion-right src="assets/imgs/indus.png" class="navbarLogo" />
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>-->
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header><br><br><br><br>
+
+  <ion-content padding>
+
+ <ion-content class="login-content" padding>
+  <ion-row>
+    <ion-col text-center>
+      <img src="assets/imgs/indus.png" width="300">
+    </ion-col>
+  </ion-row>
+  <div class="login-box">
+    <form (ngSubmit)="login()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            
+            <ion-item>
+              <ion-input id="email" type="text" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid" (click)="login(email)">Login</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+  <button ion-button class="register-btn" block clear (click)="createAccount()">Create New Account</button>
+</ion-content>
+
+  <!--<ion-row>
+    <ion-col text-center>
+      <img src="assets/imgs/indus.png" width="300">
+    </ion-col>
+  </ion-row>
+  <div >
+    <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <ion-item>
+              <ion-input placeholder="Email" name="username" id="loginField"
+                         type="text" required [(ngModel)]="username" #email></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input placeholder="Password" name="password" id="passwordField"
+                         type="password" required [(ngModel)]="password"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+          <button ion-button class="submit-btn" full type="submit"
+                  [disabled]="!loginForm.form.valid">Login
+          </button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>-->
+  <!--<div hideWhen="core">
+    <button ion-button full (click)="redirectLogin()">Login</button>
+  </div>-->
+<!--<ion-row>
+    <ion-col text-center>
+      <img src="assets/imgs/indus.png" width="300">
+    </ion-col>
+  </ion-row>
+  <mbsc-form class="md-login-form" [options]="formSettings">
+    <div class="md-logo micons icon-mbsc-logo"></div>
+    <div class="mbsc-form-group-inset">
+        <mbsc-input id="email" type="email" name="Email" placeholder="Email"></mbsc-input>
+        <mbsc-input name="password" type="text" placeholder="Password" password-toggle="true" icon="none" icon-align="right"></mbsc-input>
+    </div>
+    <div class="mbsc-form-group-inset mbsc-padding mbsc-align-center">
+        <a href="#" *ngIf="isLogin" (click)="isLogin = false">Don't have an account yet? Sign up.</a>
+        <a href="#" *ngIf="!isLogin" (click)="isLogin = true">Already have an account?</a>
+        <br><br>
+        <a href="#">Forgot password?</a>
+    </div>
+    <div class="mbsc-form-group-inset mbsc-padding">
+        <mbsc-button block *ngIf="isLogin">Sign in</mbsc-button>
+        <mbsc-button block *ngIf="!isLogin">Sign up</mbsc-button>
+    </div>
+</mbsc-form>-->
+</ion-content>

@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-navbar color="induscolor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="home">
+  <!--<p> Welcome: {{email}}</p>
+
+  <ion-list  >
+    <ion-item text-wrap *ngFor="let item of finalresult" >
+      <p >{{item.placeName}}</p>
+    </ion-item>
+  </ion-list>-->
+
+  <!--<img src="assets/imgs/indus.png" class="logo"/>-->
+ <!--<button ion-button block class="marginTop" (click)="signup()">Signup</button>
+     <button ion-button block color="lightprimary" (click)="login()">Login</button>-->
+<div id="content" class="logo">
+     <ion-slides  autoplay="3000" loop="true" speed="1500">
+    <ion-slide *ngFor="let slide of slideData">
+      <img src="{{slide.image}}" />
+    </ion-slide>
+  </ion-slides>
+</div>
+<!--<ion-list>
+  <div id="content1">
+  <ion-item class="marginTopless" (click)="citylist()">
+    <ion-input  type="text"  placeholder="From" required="required"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="To" required="required"></ion-input>
+  </ion-item></div>
+  <div id="content1">
+  <ion-item class="marginTopless">
+        <ion-label stacked color="primary">Journy Date</ion-label>
+        <ion-input type="date" value="dd/mm/yyyy" required="required"></ion-input>
+
+    </ion-item></div>
+    
+
+  <button ion-button block color="primary" class="marginTopless" (click)="buslist()">Search Buses</button>
+
+</ion-list>-->
+
+<mbsc-form class="md-flight-booking" [options]="formSettings">
+    <!--<div class="md-header">Book a Bus</div>-->
+    <div class="md-ftype-cont">
+        <mbsc-segmented-group [(ngModel)]="segmented">
+            <mbsc-segmented value="round" class="md-flight-type">Round trip</mbsc-segmented>
+            <mbsc-segmented value="oneway" class="md-flight-type">One way</mbsc-segmented>
+        </mbsc-segmented-group>
+    </div>
+    <label>
+        Origin
+        <select class="md-place-select md-origin"  mbsc-select [mbsc-options]="selectSettings" [placeholder]="Please">
+            <option *ngFor="let item of finalresult"  >{{item.placeName}}</option>
+        </select>
+    </label>
+    <label>
+        Destination
+        <select class="md-place-select md-destination" [(ngModel)]="destination" mbsc-select [mbsc-options]="selectSettings" [placeholder]="Please">
+            <option *ngFor="let item of finalresult">{{item.placeName}}</option>
+        </select>
+    </label>
+
+    <div class="md-place-select md-destination">
+        <label>
+            Leaving
+            <input type="text" class="md-leaving-date" />
+        </label>
+
+        <!--<label>
+            Returning
+            <input type="text" class="md-return-date" [disabled]="segmented == 'oneway'"/>
+        </label>-->
+        <div [(ngModel)]="range" mbsc-range [mbsc-options]="rangeSettings"></div>
+    </div>
+
+    <div class="md-place-select md-destination">
+      <label>
+            Returning
+            <input type="text" class="md-return-date" [disabled]="segmented == 'oneway'"/>
+        </label>
+        <div [(ngModel)]="range" mbsc-range [mbsc-options]="rangeSettings"></div>
+    </div>
+
+    <mbsc-stepper [(ngModel)]="adults" min="1" max="15" val="left">Adults
+        <span class="mbsc-desc">From 14 years</span>
+    </mbsc-stepper>
+    <!--<div style="height:1px; background:#808080; width:100%;"></div>-->
+    <mbsc-stepper [(ngModel)]="children" max="15" val="left">Children
+        <span class="mbsc-desc">2-14 years</span>
+    </mbsc-stepper>
+    <!--<div style="height:1px; background:#808080; width:100%;"></div>-->
+    <!--<mbsc-stepper [(ngModel)]="infant" max="10" val="left">Infant
+        <span class="mbsc-desc">0-2 years</span>
+    </mbsc-stepper>-->
+
+    <mbsc-segmented-group [(ngModel)]="segmented2">
+        <mbsc-segmented value="A/C" class="md-flight-type">A/C</mbsc-segmented>
+        <mbsc-segmented value="Non A/C" class="md-flight-type">Non A/C</mbsc-segmented>
+    </mbsc-segmented-group>
+
+    <div >
+        <mbsc-button block="true" color="primary" (click)="busServiceList(jDate)">Find Buses</mbsc-button>
+        <!--<mbsc-button block="true" color="primary" (click)="test()">Test</mbsc-button>-->
+    </div>
+</mbsc-form>
+
+</ion-content>
